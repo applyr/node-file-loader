@@ -31,7 +31,7 @@ Loader.load(__dirname+'/example.txt')
 });
 ```
 
-### load(filePath)
+### yaml(filePath)
 
 Load YAML file into a Javascript object. Returns a promise object containing the object.
 
@@ -46,9 +46,9 @@ Loader.yaml(__dirname+'/example.yml')
 ```
 
 
-### load(filePath)
+### json(filePath)
 
-Load YAML file into a Javascript object. Returns a promise object containing the object.
+Load JSON file into a Javascript object. Returns a promise object containing the object.
 
 ```javascript
 Loader.json(__dirname+'/example.json')
