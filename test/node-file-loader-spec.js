@@ -6,13 +6,9 @@ var Loader = require('../lib');
 
 describe('Loader', function () {
 
-  before(function () {
-    this.loader = new Loader();
-  });
-
   describe('.load', function () {
     it('loads the file, if the file exists', function (done) {
-      this.loader.load(__dirname+'/fixtures/.demo')
+      Loader.load(__dirname+'/fixtures/.demo')
       .then(function (file) {
         var expected = "line1\nline2\nline3\n";
         expect(file).to.deep.equal(expected);
@@ -21,7 +17,7 @@ describe('Loader', function () {
     });
 
     it('returns an error, if the file does not exist', function (done) {
-      this.loader.load(__dirname+'/fixtures/does-not-exist')
+      Loader.load(__dirname+'/fixtures/does-not-exist')
       .fail(function (err) {
         expect(err).to.be.ok;
         done();
@@ -31,7 +27,7 @@ describe('Loader', function () {
 
   describe('.yaml', function () {
     it('loads the file, if the file exists', function (done) {
-      this.loader.yaml(__dirname+'/fixtures/demo.yml')
+      Loader.yaml(__dirname+'/fixtures/demo.yml')
       .then(function (file) {
         var expected = {
           users: ["jpstevens", "applyr"],
@@ -44,7 +40,7 @@ describe('Loader', function () {
     });
 
     it('returns an error, if the file does not exist', function (done) {
-      this.loader.yaml(__dirname+'/fixtures/does-not-exist')
+      Loader.yaml(__dirname+'/fixtures/does-not-exist')
       .fail(function (err) {
         expect(err).to.be.ok;
         done();
@@ -52,7 +48,7 @@ describe('Loader', function () {
     });
 
     it('returns an error, if the file cannot be parsed', function (done) {
-      this.loader.yaml(__dirname+'/fixtures/bad-demo.yml')
+      Loader.yaml(__dirname+'/fixtures/bad-demo.yml')
       .fail(function (err) {
         expect(err).to.be.ok;
         done();
@@ -62,7 +58,7 @@ describe('Loader', function () {
 
   describe('.json', function () {
     it('loads the file, if the file exists', function (done) {
-      this.loader.json(__dirname+'/fixtures/demo.json')
+      Loader.json(__dirname+'/fixtures/demo.json')
       .then(function (file) {
         var expected = {
           users: ["jpstevens", "applyr"],
@@ -75,7 +71,7 @@ describe('Loader', function () {
     });
 
     it('returns an error, if the file does not exist', function (done) {
-      this.loader.json(__dirname+'/fixtures/does-not-exist')
+      Loader.json(__dirname+'/fixtures/does-not-exist')
       .fail(function (err) {
         expect(err).to.be.ok;
         done();
@@ -83,7 +79,7 @@ describe('Loader', function () {
     });
 
     it('returns an error, if the file cannot be parsed', function (done) {
-      this.loader.json(__dirname+'/fixtures/bad-demo.yml')
+      Loader.json(__dirname+'/fixtures/bad-demo.yml')
       .fail(function (err) {
         expect(err).to.be.ok;
         done();
