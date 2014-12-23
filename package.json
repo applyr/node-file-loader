@@ -1,0 +1,35 @@
+{
+  "name": "node-file-loader",
+  "version": "0.1.0",
+  "description": "File loader for JSON, UTF-8 and YAML files",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "mocha **/*-spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/applyr/node-file-loader.git"
+  },
+  "keywords": [
+    "file",
+    "loader",
+    "q",
+    "json",
+    "yaml",
+    "yml"
+  ],
+  "author": "Jack Stevens <jack@applyr.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/applyr/node-file-loader/issues"
+  },
+  "homepage": "https://github.com/applyr/node-file-loader",
+  "devDependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
+  },
+  "dependencies": {
+    "js-yaml": "^3.2.4",
+    "q": "^1.1.2"
+  }
+}

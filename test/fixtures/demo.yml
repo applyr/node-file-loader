@@ -1,0 +1,9 @@
+users:
+- jpstevens
+- applyr
+languages:
+  - javascript
+  - coffeescript
+projects:
+  javascript: 12
+  coffeescript: 7
